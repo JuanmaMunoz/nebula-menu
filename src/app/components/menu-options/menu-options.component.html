@@ -1,0 +1,11 @@
+<div class="menu-options d-flex flex-column">
+  <div class="menu-options__title">
+    <img [src]="menuOptions.icon">
+    <span class="text-primary fs-6">
+      {{menuOptions.title | translate}}
+    </span>
+  </div>
+  <span *ngFor ="let option of menuOptions?.options" class="menu-options__option">
+    <a class="text-secondary" [routerLink]="option.url">{{option.text |translate}}</a>
+  </span>
+</div>

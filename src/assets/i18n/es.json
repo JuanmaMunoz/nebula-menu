@@ -1,0 +1,12 @@
+{
+  "menuTitles":{
+    "user": "Mi Usuario",
+    "company": "Mi Compañía"
+  },
+  "menuOptions":{
+    "profile": "Mi perfil",
+    "certificates": "Mis certificados",
+    "configuration": "Configuración",
+    "metrics": "Metricas"
+  }
+}
