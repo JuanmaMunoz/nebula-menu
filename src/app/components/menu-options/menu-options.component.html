@@ -6,6 +6,6 @@
     </span>
   </div>
   <span *ngFor ="let option of menuOptions?.options" class="menu-options__option">
-    <a class="text-secondary" [routerLink]="option.url">{{option.text |translate}}</a>
+    <a class="link-secondary"  [routerLink]="option.url">{{option.text |translate}}</a>
   </span>
 </div>

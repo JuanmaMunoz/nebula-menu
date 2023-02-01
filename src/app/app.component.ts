@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { fromEvent, Subscription } from 'rxjs';
 
 @Component({
   selector: 'nebula-menu',
@@ -9,12 +10,22 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'nebula-menu';
   public languageSelected: string = localStorage.getItem('nebulaLanguage') || 'en';
+  private subscription = new Subscription();
   constructor(private translate: TranslateService) {
   }
 
-  ngOnInit(){
+  ngOnInit(): void{
+    this.subscription.add(
+      fromEvent(window,'externalChangeLanguage').subscribe((data:Partial<CustomEvent>)=>{
+        this.translate.use(data.detail.language);
+      })
+    );
     this.translate.setDefaultLang('es');
     this.useLanguage();
+  }
+
+  ngOnDestroy(): void{
+    this.subscription.unsubscribe();
   }
 
   changeLanguage(): void {
