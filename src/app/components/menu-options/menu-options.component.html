@@ -1,11 +1,13 @@
 <div class="menu-options d-flex flex-column">
   <div class="menu-options__title">
-    <img [src]="menuOptions.icon">
+    <img [src]="menuOptions.icon" />
     <span class="text-primary fs-6">
-      {{menuOptions.title | translate}}
+      {{ menuOptions.title | translate }}
     </span>
   </div>
-  <span *ngFor ="let option of menuOptions?.options" class="menu-options__option">
-    <a class="link-secondary"  [routerLink]="option.url">{{option.text |translate}}</a>
+  <span *ngFor="let option of menuOptions?.options" class="menu-options__option">
+    <a *ngIf="option.type === 'internal'" class="link-secondary" [routerLink]="option.action">{{ option.text | translate }}</a>
+    <a *ngIf="option.type === 'external'" class="link-secondary" [href]="option.action" target="_blank">{{ option.text | translate }}</a>
+    <a *ngIf="option.type === 'handler'" class="link-secondary" (click)="action(option.action)">{{ option.text | translate }}</a>
   </span>
 </div>

@@ -1,12 +1,16 @@
 {
   "menuTitles":{
     "user": "My user",
-    "company": "My Company"
+    "company": "My Company",
+    "documentation": "Documentation"
   },
   "menuOptions":{
     "profile": "My profile",
     "certificates": "My certificates",
     "configuration": "Configuration",
-    "metrics": "Metrics"
+    "metrics": "Metrics",
+    "docStart": "Getting started",
+    "docUserGuide": "User guide",
+    "linkExt": "External link"
   }
 }
