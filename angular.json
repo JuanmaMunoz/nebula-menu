@@ -38,7 +38,7 @@
               "libraryName": "nebula-menu",
               "libraryTarget": "umd"
             },
-            "deployUrl": "https://juanmamunoz.github.io/nebula-menu/"
+            "deployUrl": "https://devel.nebulaservice.net/menu/"
           },
           "configurations": {
             "production": {
