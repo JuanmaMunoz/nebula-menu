@@ -35,7 +35,7 @@ export class MenuComponent implements OnInit, OnDestroy {
       options: [
         {
           text: 'menuOptions.profile',
-          action: '/users',
+          action: '/users/info',
           type: TypeLink.internal,
         },
         {
