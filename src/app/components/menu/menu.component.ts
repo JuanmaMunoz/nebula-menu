@@ -39,6 +39,11 @@ export class MenuComponent implements OnInit, OnDestroy {
           type: TypeLink.internal,
         },
         {
+          text: 'menuOptions.configuration',
+          action: '/users/configuration',
+          type: TypeLink.internal,
+        },
+        {
           text: 'menuOptions.certificates',
           action: '/cert',
           type: TypeLink.internal,
